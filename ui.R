@@ -4,7 +4,9 @@ library(shinydashboard)
 
 dashboardPage(
   dashboardHeader(),
-  dashboardSidebar(),
+  dashboardSidebar(
+    selectInput("team", "Team:", choices = sort(latestGames$Team))
+  ),
   dashboardBody(
     fluidRow(
       box(DT::dataTableOutput("table"), width = 12)
