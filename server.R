@@ -4,7 +4,7 @@ server <- function(input, output) {
   
   output$table <- DT::renderDataTable({
     latestGames
-  }, options = list(autoWidth = TRUE)
+  }#, options = list(autoWidth = TRUE)
   )
   
   output$graph <- renderPlot({
