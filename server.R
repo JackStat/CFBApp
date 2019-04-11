@@ -2,8 +2,9 @@
 
 server <- function(input, output) { 
   
-  output$table <- DT::renderDataTable(
-    mtcars
+  output$table <- DT::renderDataTable({
+    latestGames
+  }, options = list(autoWidth = TRUE)
   )
   
   output$graph <- renderPlot({
