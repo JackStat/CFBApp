@@ -7,8 +7,8 @@ dashboardPage(
   dashboardSidebar(),
   dashboardBody(
     fluidRow(
-      box(DT::dataTableOutput("table"))
-      ,box(plotOutput("graph"))
+      box(DT::dataTableOutput("table"), width = 12)
+      # ,box(plotOutput("graph"))
     )
   )
 )
